@@ -174,7 +174,7 @@
                 <p id="saidaReduce">Resultado do reduce aqui!</p>
 
                 <script>
-                    //adicione aqui o script para resolução do Exercício 12 
+                    //adicione aqui o script para resolução do Exercício 12
                     let reduzido = numeros.reduce((numero, valorAtual) => numero + valorAtual)
 
                     elemento = document.getElementById("saidaReduce");
@@ -191,7 +191,14 @@
                 <p id="saidaParesAoQuadradoMais42">Resultado aqui</p>
 
                 <script>
-                    //adicione aqui o script para resolução do Exercício 13 
+                    //adicione aqui o script para resolução do Exercício 13
+                    resultado = numeros.filter(numeros => numeros % 2 == 0)
+                                .map(numeros =>numeros*2)
+                                .reduce((total, valorAtual) => total + valorAtual) 
+                                + 42
+
+                    elemento = document.getElementById("saidaParesAoQuadradoMais42");
+                    elemento.innerHTML = resultado
                 </script>
 
 </body>
